@@ -53,8 +53,8 @@
           "apiVersion": "2019-06-01-preview",
           "name": "[parameters('sqlDBName')]",
           "sku": {
-            "name": "Standard",
-            "tier": "Standard"
+            "name": "Base",
+            "tier": "Base"
           },
           "location": "[parameters('location')]",
           "dependsOn": [
