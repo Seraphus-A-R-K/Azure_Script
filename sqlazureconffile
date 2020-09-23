@@ -4,7 +4,7 @@
   "parameters": {
     "serverName": {
       "type": "string",
-      "defaultValue": "[uniqueString('SQLSERVER', resourceGroup().id)]",
+      "defaultValue": "SQLSERVER",
       "metadata": {
         "description": "The name of the SQL logical server."
       }
@@ -30,7 +30,7 @@
       }
     },
     "administratorLoginPassword": {
-      "type": "string",
+      "type": "securestring",
       "metadata": {
         "description": "The administrator password of the SQL logical server."
       }
