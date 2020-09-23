@@ -4,7 +4,7 @@
   "parameters": {
     "serverName": {
       "type": "string",
-      "defaultValue": ""[uniqueString('SQLSERVER', resourceGroup().id)]"",
+      "defaultValue": "[uniqueString('SQLSERVER', resourceGroup().id)]",
       "metadata": {
         "description": "The name of the SQL logical server."
       }
