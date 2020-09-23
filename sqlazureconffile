@@ -30,7 +30,7 @@
       }
     },
     "administratorLoginPassword": {
-      "type": "securestring",
+      "type": "string",
       "metadata": {
         "description": "The administrator password of the SQL logical server."
       }
@@ -53,8 +53,8 @@
           "apiVersion": "2019-06-01-preview",
           "name": "[parameters('sqlDBName')]",
           "sku": {
-            "name": "Base",
-            "tier": "Base"
+            "name": "Standard",
+            "tier": "Standard"
           },
           "location": "[parameters('location')]",
           "dependsOn": [
