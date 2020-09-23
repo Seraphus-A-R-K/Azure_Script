@@ -1,12 +1,12 @@
-﻿function Menu
+function Menu
 {
      
      cls
      Write-Host "================ MENU ================"
     
      Write-Host "1: Appuyer sur '1' pour créer un serveur SQL."
-     Write-Host "2: Appuyer sur '2' pour supprimer un serveur SQl"
-     Write-Host "3: Appuyer sur '3' pour modifier le mot de passe d'un utilisateur AzureAD."
+     Write-Host "2: Appuyer sur '2' pour supprimer un groupe de ressources"
+     Write-Host "3: Appuyer sur '3' pour supprimer un serveur SQl"
      Write-Host "Q: Press 'Q' to quit."
 }
 
@@ -34,7 +34,7 @@ Get-AzResourceGroup | Select ResourceGroupName,ResourceId
 $resourceGroupName = Read-Host -Prompt "Nom du groupe de ressource"
 Get-AzResourceGroup | Get-AzSqlServer
 $ServName = Read-Host -Prompt "Renseigner un ServerName"
-Remove-AzureRmSqlServer -ResourceGroupName "$resourceGroupName" -ServerName "$ServName"
+Remove-AzSqlServer -ResourceGroupName "$resourceGroupName" -ServerName "$ServName"
 
 }
 
