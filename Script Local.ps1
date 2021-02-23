@@ -14,12 +14,12 @@ function Menu
      Write-Host "Q: Press 'Q' to quit."
 }
 
-# Les informations du domaine Active Directory et le nom d'ordinateur sont écrit en tant qu'exemple, il faut les modifiers.
+# Les informations du domaine Active Directory et le nom d'ordinateur sont écrit en tant qu'exemple, il faut les modifier.
 # 
 
 function CreateUserFromCsv {
 
-#Enter a path to your import CSV file
+#Ajouter un path vers le csv
 $ADUsers = Import-csv C:\temp\newusers.csv -Delimiter ";"
 
 foreach ($User in $ADUsers)
